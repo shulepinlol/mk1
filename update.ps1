@@ -99,10 +99,8 @@ function Update-Files($zipPath) {
             exit 1
         }
 
-        Write-Output "Moving extracted files..."
-        Get-ChildItem -Path "$($extractedFolder.FullName)\*" | ForEach-Object {
-            Move-Item -Path $_.FullName -Destination "." -Force -ErrorAction SilentlyContinue
-        }
+        Write-Output "Copying extracted files..."
+        Copy-Item -Path "$($extractedFolder.FullName)\*" -Destination "." -Recurse -Force
 
         Write-Output "Cleaning up temporary files..."
         Remove-Item -Path $extractedFolder.FullName -Recurse -Force
