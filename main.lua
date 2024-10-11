@@ -168,9 +168,9 @@ if not _G.SLN_MODULES_INITIALIZED then
     add_module(_G.SLN_MODULES, "havik_frame_data")
     add_module(_G.SLN_MODULES, "shangtsung_frame_data")
     add_module(_G.SLN_MODULES, "ermac_frame_data")
-    --> Sektor Missing
-    --> Cyrax Missing
-    --> NoobSaibot Missing
+    add_module(_G.SLN_MODULES, "sektor_frame_data")
+    add_module(_G.SLN_MODULES, "cyrax_frame_data")
+    add_module(_G.SLN_MODULES, "noobsaibot_frame_data")
 
     add_module(_G.SLN_MODULES, "auto_block")
     add_module(_G.SLN_MODULES, "scorpion_sareena_combo")
